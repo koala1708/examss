@@ -2,7 +2,7 @@ namespace BANDIT_со_смыслом_
 {
     public partial class student : Form
     {
-        int Count = 0;
+        int count = 0;
 
         public student()
 
@@ -12,14 +12,14 @@ namespace BANDIT_со_смыслом_
 
         private void click_btn_Click(object sender, EventArgs e)
         {
-            Count++;
+            count++;
             Count_lbl.Text = Count.ToString();
-            if (Count >= 6)
+            if (count >= 6)
             {
                 click_btn.Enabled = false;
 
             }
-            if (Count >= 11)
+            if (count >= 11)
             {
                 MessageBox.Show("Ты победил, молодец!!!!");
             }
@@ -29,14 +29,14 @@ namespace BANDIT_со_смыслом_
 
         private void click_touch_1_Click(object sender, EventArgs e)
         {
-            Count += 4;
+            count += 4;
             Count_lbl.Text = Count.ToString();
-            if (Count >=11)
+            if (count >=11)
             {
 
                 MessageBox.Show("Ты победил, молодец!!!!");
             }
-            if (Count >= 6)
+            if (count >= 6)
             {
                 click_btn.Enabled = false;
 
@@ -46,14 +46,14 @@ namespace BANDIT_со_смыслом_
 
         private void Click_touch_2_Click(object sender, EventArgs e)
         {
-            Count += 9;
+            count += 9;
             Count_lbl.Text = Count.ToString();
-            if (Count >= 11)
+            if (count >= 11)
 
             {
                 MessageBox.Show("Ты победил, молодец!!!!");
             }
-            if (Count >= 6)
+            if (count >= 6)
             {
                 click_btn.Enabled = false;
 
@@ -62,7 +62,7 @@ namespace BANDIT_со_смыслом_
 
         private void click_nol_Click(object sender, EventArgs e)
         {
-            Count = 0;
+            count = 0;
             Count_lbl.Text = Count.ToString();
             click_btn.Enabled = true;
 
@@ -72,19 +72,19 @@ namespace BANDIT_со_смыслом_
         private void click_opa_Click(object sender, EventArgs e)
         {
 
-            if (Count < 50)
+            if (count < 50)
             {
-                Count += 5;
+                count += 5;
             }
             else 
-                Count += 10;
+                count += 10;
             Count_lbl.Text = Count.ToString();
-            if (Count >= 11)
+            if (count >= 11)
             {
 
                 MessageBox.Show("Ты победил, молодец!!!!");
             }
-            if (Count >= 6)
+            if (count >= 6)
             {
                 click_btn.Enabled = false;
 
