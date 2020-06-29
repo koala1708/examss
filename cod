@@ -1,0 +1,103 @@
+namespace BANDIT_со_смыслом_
+{
+    public partial class student : Form
+    {
+        int Count = 0;
+
+        public student()
+
+        {
+            InitializeComponent();
+        }
+
+        private void click_btn_Click(object sender, EventArgs e)
+        {
+            Count++;
+            Count_lbl.Text = Count.ToString();
+            if (Count >= 6)
+            {
+                click_btn.Enabled = false;
+
+            }
+            if (Count >= 11)
+            {
+                MessageBox.Show("Ты победил, молодец!!!!");
+            }
+
+
+        }
+
+        private void click_touch_1_Click(object sender, EventArgs e)
+        {
+            Count += 4;
+            Count_lbl.Text = Count.ToString();
+            if (Count >=11)
+            {
+
+                MessageBox.Show("Ты победил, молодец!!!!");
+            }
+            if (Count >= 6)
+            {
+                click_btn.Enabled = false;
+
+            }
+
+        }
+
+        private void Click_touch_2_Click(object sender, EventArgs e)
+        {
+            Count += 9;
+            Count_lbl.Text = Count.ToString();
+            if (Count >= 11)
+
+            {
+                MessageBox.Show("Ты победил, молодец!!!!");
+            }
+            if (Count >= 6)
+            {
+                click_btn.Enabled = false;
+
+            }
+        }
+
+        private void click_nol_Click(object sender, EventArgs e)
+        {
+            Count = 0;
+            Count_lbl.Text = Count.ToString();
+            click_btn.Enabled = true;
+
+
+        }
+
+        private void click_opa_Click(object sender, EventArgs e)
+        {
+
+            if (Count < 50)
+            {
+                Count += 5;
+            }
+            else 
+                Count += 10;
+            Count_lbl.Text = Count.ToString();
+            if (Count >= 11)
+            {
+
+                MessageBox.Show("Ты победил, молодец!!!!");
+            }
+            if (Count >= 6)
+            {
+                click_btn.Enabled = false;
+
+            }
+
+
+        }
+
+        private void Count_lbl_Click(object sender, EventArgs e)
+        {
+           
+        }
+    }   
+}   
+
+ 
